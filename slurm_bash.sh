@@ -9,13 +9,13 @@
 
 #! Give your job a name
 #SBATCH -J annotation_conversion
-#SBATCH --cpus-per-task =1
+#SBATCH --cpus-per-task=1
 #! How much memory do you need?
 #SBATCH --mem=16G
 #! How much wallclock time will be required?
 #SBATCH --time=01:00:00
 #! What types of email messages do you wish to receive?
-#SBATCH --mail-type=FAIL, END
+#SBATCH --mail-type=FAIL,END
 #! Specify your email address here otherwise you won't recieve emails!
 #SBATCH --mail-user=Shiv.Sakthivel@cruk.cam.ac.uk
 #! Uncomment this to prevent the job from being requeued (e.g. if
