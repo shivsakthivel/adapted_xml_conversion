@@ -9,8 +9,7 @@
 
 #! Give your job a name
 #SBATCH -J annotation_conversion
-#! How many cores per task?
-#! SBATCH --cpus-per-gpu=1
+#SBATCH --cpus-per-task=1
 #! How much memory do you need?
 #SBATCH --mem=8G
 #! How much wallclock time will be required?
@@ -26,7 +25,7 @@
 #SBATCH -p general
 #! Specify a GRES (generic resource) of type gpu and how many you want
 #! SBATCH --gres gpu:1
-#SBATCH -o ./slurm/out/annotations/conversion.out
-#SBATCH -e ./slurm/error/annotations/conversion.error
+#SBATCH -o ./conversion.out
+#SBATCH -e ./conversion.error
 
 python adapted_xml_geojson.py -i /mnt/scratchc/fmlab/datasets/imaging/best2/he/annotations -o /mnt/scratchc/fmlab/datasets/imaging/best2/he/geojson_annotations
