@@ -10,7 +10,7 @@
 #! Give your job a name
 #SBATCH -J annotation_conversion
 #! How many cores per task?
-#SBATCH --cpus-per-gpu=1
+#! SBATCH --cpus-per-gpu=1
 #! How much memory do you need?
 #SBATCH --mem=8G
 #! How much wallclock time will be required?
