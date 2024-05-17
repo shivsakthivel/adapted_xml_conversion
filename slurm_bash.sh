@@ -22,7 +22,7 @@
 #! interrupted by node failure or system downtime):
 ##SBATCH --no-requeue
 #! General partition
-#SBATCH -p general
+#SBATCH -p epyc
 #! Specify a GRES (generic resource) of type gpu and how many you want
 #! SBATCH --gres gpu:1
 #SBATCH -o /mnt/scratchc/fmlab/sakthi01/conversion.out
