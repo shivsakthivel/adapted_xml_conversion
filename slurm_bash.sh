@@ -29,4 +29,4 @@
 #SBATCH -o ./slurm/out/annotations/conversion.out
 #SBATCH -e ./slurm/error/annotations/conversion.error
 
-python adapted_xml_geojson.py -i annotations -o geojson_annotations
+python adapted_xml_geojson.py -i /mnt/scratchc/fmlab/datasets/imaging/best2/he/annotations -o /mnt/scratchc/fmlab/datasets/imaging/best2/he/geojson_annotations
