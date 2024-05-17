@@ -4,7 +4,6 @@ import argparse
 import os
 import xmltodict # type: ignore
 import simplejson # type: ignore
-import glob
 
 # useful functions
 def hex2rgb(hexcode): # hexcode example: '#FF0840'
