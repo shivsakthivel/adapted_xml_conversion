@@ -11,7 +11,6 @@ def hex2rgb(hexcode): # hexcode example: '#FF0840'
     return [r,g,b]
 
 # read in arguments from command line
-# Assumes the input directory only has xml files and the output directory has already
 parser = argparse.ArgumentParser()
 parser.add_argument('-i',help='xml input directory')
 parser.add_argument('-o',help='geojson output directory')
@@ -21,7 +20,7 @@ args = parser.parse_args()
 os.mkdir(args.o)
 
 # Read in list of XML files
-input_files = [f for f in os.listdir(args.i) if f.endswith('.xml') ]
+input_files = [f for f in os.listdir(args.i) if f.endswith('.xml') ] #Only converts the XML files
 for file in input_files:
     f = open(args.i + "/" + file, 'r')
     # from the xml file, we can retrieve a dictionary
