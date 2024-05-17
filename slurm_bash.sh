@@ -9,13 +9,13 @@
 
 #! Give your job a name
 #SBATCH -J annotation_conversion
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus =1
 #! How much memory do you need?
-#SBATCH --mem=8G
+#SBATCH --mem=16G
 #! How much wallclock time will be required?
-#SBATCH --time=1:00:00
+#SBATCH --time=01:00:00
 #! What types of email messages do you wish to receive?
-#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL, END
 #! Specify your email address here otherwise you won't recieve emails!
 #SBATCH --mail-user=Shiv.Sakthivel@cruk.cam.ac.uk
 #! Uncomment this to prevent the job from being requeued (e.g. if
@@ -25,7 +25,7 @@
 #SBATCH -p general
 #! Specify a GRES (generic resource) of type gpu and how many you want
 #! SBATCH --gres gpu:1
-#SBATCH -o /mnt/scratchc/fmlab/sakthi01/adapted_xml_conversion/log/conversion.out
-#SBATCH -e /mnt/scratchc/fmlab/sakthi01/adapted_xml_conversion/log/conversion.error
+#SBATCH -o /mnt/scratchc/fmlab/sakthi01/conversion.out
+#SBATCH -e /mnt/scratchc/fmlab/sakthi01/conversion.error
 
 python adapted_xml_geojson.py -i /mnt/scratchc/fmlab/datasets/imaging/best2/he/annotations -o /mnt/scratchc/fmlab/datasets/imaging/best2/he/geojson_annotations
