@@ -21,6 +21,7 @@ os.mkdir(args.o)
 
 # Read in list of XML files
 input_files = [f for f in os.listdir(args.i) if f.endswith('.xml') ] #Only converts the XML files
+input_files = sorted(input_files)
 for file in input_files:
     f = open(args.i + "/" + file, 'r')
     # from the xml file, we can retrieve a dictionary
