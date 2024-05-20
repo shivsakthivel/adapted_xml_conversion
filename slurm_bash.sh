@@ -25,7 +25,7 @@
 #SBATCH -p epyc
 #! Specify a GRES (generic resource) of type gpu and how many you want
 #! SBATCH --gres gpu:1
-#SBATCH -o /mnt/scratchc/fmlab/sakthi01/conversion.out
-#SBATCH -e /mnt/scratchc/fmlab/sakthi01/conversion.error
+#SBATCH -o /mnt/scratchc/fmlab/sakthi01/conversion_sorted.out
+#SBATCH -e /mnt/scratchc/fmlab/sakthi01/conversion_sorted.error
 
-python adapted_xml_geojson.py -i /mnt/scratchc/fmlab/datasets/imaging/best2/he/annotations -o /mnt/scratchc/fmlab/datasets/imaging/best2/he/geojson_annotations
+python adapted_xml_geojson.py -i /mnt/scratchc/fmlab/datasets/imaging/best2/he/annotations -o /mnt/scratchc/fmlab/datasets/imaging/best2/he/geojson_annotations_sorted
